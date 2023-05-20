@@ -45,74 +45,25 @@ To assess the model's performance, various analyses can be performed. These incl
 By understanding the theoretical background of the SHRED model and exploring its capabilities through analysis, we can gain insights into its effectiveness in reconstructing spatio-temporal fields and make informed decisions regarding its application in real-world scenarios.
 
 ## Algorithm Implementation and Development 
+Here are the steps for the algorithm implementation and development
+1. Import the necessary libraries for data processing, model training, and visualization.
+2. Define the parameters for the experiment, such as the list of sensor counts or noise levels to test, and initialize an empty list to store the performance results.
+3. Iterate over each sensor count or noise level to perform the experiment.
+4. Load the dataset or generate synthetic data based on the requirements of the assignment.
+5. Split the data into training, validation, and test sets using appropriate methods (e.g., random sampling, time-based splitting).
+6. Convert the data into appropriate formats for model training and evaluation, such as PyTorch tensors.
+7. Create the training, validation, and test datasets using the processed data.
+8. Build and train the model based on the assignment's requirements, using suitable architectures, hyperparameters, and optimization techniques.
+9. Monitor the model's performance during training, such as calculating validation errors or other evaluation metrics.
+10. Evaluate the trained model on the test dataset and calculate the performance metric of interest (e.g., reconstruction error, accuracy, loss).
+11. Store the performance result in the performance_results list.
+12. Repeat steps 3 to 12 for each sensor count or noise level.
+13. Plot the performance results to visualize the relationship between the experimental variable (sensor count or noise level) and the performance metric.
 
-Import the necessary libraries for data processing, model training, and visualization.
-
-Define the parameters for the experiment, such as the list of sensor counts or noise levels to test, and initialize an empty list to store the performance results.
-
-Iterate over each sensor count or noise level to perform the experiment.
-
-Load the dataset or generate synthetic data based on the requirements of the assignment.
-
-Preprocess the data if necessary, such as scaling or adding noise.
-
-Split the data into training, validation, and test sets using appropriate methods (e.g., random sampling, time-based splitting).
-
-Convert the data into appropriate formats for model training and evaluation, such as PyTorch tensors.
-
-Create the training, validation, and test datasets using the processed data.
-
-Build and train the model based on the assignment's requirements, using suitable architectures, hyperparameters, and optimization techniques.
-
-Monitor the model's performance during training, such as calculating validation errors or other evaluation metrics.
-
-Evaluate the trained model on the test dataset and calculate the performance metric of interest (e.g., reconstruction error, accuracy, loss).
-
-Store the performance result in the performance_results list.
-
-Repeat steps 3 to 12 for each sensor count or noise level.
-
-Plot the performance results to visualize the relationship between the experimental variable (sensor count or noise level) and the performance metric.
-
-Development Description:
-
-Start by importing the necessary libraries required for data processing, model training, and visualization.
-
-Define the parameters for the experiment based on the assignment's requirements, such as sensor counts or noise levels to test.
-
-Write code to load the dataset or generate synthetic data as per the assignment's specifications.
-
-Preprocess the data if necessary, which may include scaling, adding noise, or applying any other transformations.
-
-Split the data into training, validation, and test sets using appropriate methods, such as random sampling or time-based splitting.
-
-Convert the data into the required format for model training and evaluation, such as PyTorch tensors.
-
-Create the training, validation, and test datasets based on the processed data.
-
-Implement the model architecture and define the necessary functions for training and evaluation. This may involve building neural network models, defining loss functions, and setting up optimization techniques.
-
-Train the model using the training dataset, monitoring its performance on the validation set to track progress and prevent overfitting.
-
-Evaluate the trained model on the test dataset and calculate the desired performance metric.
-
-Store the performance result in a suitable data structure, such as a list or array.
-
-Repeat steps 3 to 11 for each experimental variable (e.g., sensor count or noise level) specified in the assignment.
-
-Visualize the performance results using appropriate plotting techniques to analyze the relationship between the experimental variable and the performance metric.
-
-Summarize and interpret the findings from the performance analysis based on the observed trends or patterns in the graph.
-
-Optionally, optimize or refine the implementation based on the insights gained from the analysis.
-
-It's important to note that the specific implementation and development steps may vary depending on the assignment's requirements and the specific dataset or model used. The above description provides a general outline for approaching the implementation and development process.
 
 ## Computational Results
 ![image](https://github.com/ben900912/EE399-HW6/assets/121909443/2249d7e7-a3f3-4d73-8fb9-9d00126d41b5)
-Fig1: Predicted vs Actual Sea surface temperature
-
-The Fig1: Predicted vs Actual Sea surface temperature graph illustrates the comparison between the actual sensor readings and the predicted sensor readings generated by the SHRED model. In this analysis, we focus on the close alignment between the actual and predicted sensor readings.
+> Fig 1: Predicted vs Actual Sea surface temperature
 
 Upon examination of the graph, we observe that the lines representing the actual sensor readings and the predicted sensor readings closely follow each other. This close alignment indicates that the SHRED model has successfully captured the underlying patterns and dynamics of the sea surface temperature data.
 
@@ -123,7 +74,7 @@ The close agreement between the actual and predicted sensor readings indicates t
 Overall, the analysis of the Fig1: Predicted vs Actual Sea surface temperature graph highlights the successful performance of the SHRED model in capturing the actual sensor readings and generating accurate predictions. This alignment supports the reliability and effectiveness of the model in reconstructing spatio-temporal fields from sensor measurements.
 
 ![image](https://github.com/ben900912/EE399-HW6/assets/121909443/ec0dcafc-0bde-4b4b-8ed1-ecf3fd39c844)
-Fig2: SHRED model performance vs time lag
+> Fig 2: SHRED model performance vs time lag
 From these results, it can be observed that the model's performance varies with different time lag values. Generally, the model achieves relatively good accuracy with lower deviations from the actual values at smaller time lags. As the time lag increases, there may be a slight increase in deviation, but the model's accuracy remains relatively consistent.
 
 It is important to note that the specific performance values obtained may depend on the dataset and the specific problem being addressed. Therefore, further analysis and experimentation may be necessary to determine the optimal time lag value that maximizes the model's performance for a given task.
@@ -131,7 +82,7 @@ It is important to note that the specific performance values obtained may depend
 Overall, the analysis demonstrates the relationship between time lag and the performance of the SHRED model, providing valuable insights into the optimal choice of time lag for accurate predictions of spatio-temporal fields.
 
 ![image](https://github.com/ben900912/EE399-HW6/assets/121909443/6dba963a-bfe4-49fa-a455-4f73c6f21dbf)
-Fig3: SHRED model performance vs Noise Level
+> Fig 3: SHRED model performance vs Noise Level
 As the noise level increases, there should be a degradation in the performance of the SHRED model theoratically. This means that the predicted sensor readings deviate more significantly from the actual sensor readings as the noise level increases. The higher the noise level, the more challenging it becomes for the model to differentiate between the noise and the underlying signal.
 
 however,  the graph shows an unexpected behavior where the model performance initially increases with the noise level and then decreases, it could be due to various factors. Here are a few possible explanations and suggestions
@@ -139,7 +90,8 @@ however,  the graph shows an unexpected behavior where the model performance ini
 It's important to analyze the specific characteristics of your data, experiment with different models and hyperparameters, and perform multiple runs to obtain more robust results. Adjustments and fine-tuning based on these considerations should help in achieving a more expected and meaningful correlation between noise level and model performance.
 
 ![image](https://github.com/ben900912/EE399-HW6/assets/121909443/add4509d-a4ce-4cf8-bafb-532f920b9b3e)
-Fig4: SHRED model performance vs number of sensors  
+> Fig 4: SHRED model performance vs number of sensors 
+
 The graph shows the performance of the SHRED model in relation to the number of sensors used in the data. The x-axis represents the number of sensors, while the y-axis represents the performance of the model. The performance is measured as the normalized Euclidean distance between the reconstructed data and the ground truth data.
 
 This relationship aligns with expectations since having more sensors provides more coverage and observation points, which leads to a more comprehensive representation of the underlying system or phenomenon. It allows the model to capture finer details and variations in the data, resulting in improved performance.
