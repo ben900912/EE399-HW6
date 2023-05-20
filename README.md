@@ -81,7 +81,7 @@ It is important to note that the specific performance values obtained may depend
 
 Overall, the analysis demonstrates the relationship between time lag and the performance of the SHRED model, providing valuable insights into the optimal choice of time lag for accurate predictions of spatio-temporal fields.
 
-![image](https://github.com/ben900912/EE399-HW6/assets/121909443/6dba963a-bfe4-49fa-a455-4f73c6f21dbf)
+![image](https://github.com/ben900912/EE399-HW6/assets/121909443/fddf98ca-b511-4ada-97f7-c5df4c67e37a)
 > Fig 3: SHRED model performance vs Noise Level
 As the noise level increases, there should be a degradation in the performance of the SHRED model theoratically. This means that the predicted sensor readings deviate more significantly from the actual sensor readings as the noise level increases. The higher the noise level, the more challenging it becomes for the model to differentiate between the noise and the underlying signal.
 
